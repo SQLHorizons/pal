@@ -1,11 +1,11 @@
-
+# pefmon trace for collecting metrics
 
 ```powershell
 
   $definition = "https://binaries.avivagroup.com/artifactory/database-resources-generic-local/perfmon/collectors/SQLServer2016/definition.xml"
   $name =       "Database Performance"
   $path =       "S:/Data_X/diag_01/perflogs/database/Performance"
-  $duration =   3    ##  unit hours.
+  $duration =   4    ##  unit hours.
   $size =        100  ##  unit MB.
 
 
