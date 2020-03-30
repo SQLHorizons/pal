@@ -3,8 +3,8 @@
   $definition = "https://binaries.avivagroup.com/artifactory/database-resources-generic-local/perfmon/collectors/SQLServer2016/definition.xml"
   $name =       "Database Performance"
   $path =       "S:/Data_X/diag_01/database"
-  $duration =    6    ##  unit hours.
-  $size =        250  ##  unit MB.
+  $duration =    9    ##  unit hours.
+  $size =        900  ##  unit MB.
 
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12
 
@@ -29,8 +29,8 @@
         Write-Information "Creating Schedule for $name DataCollectors."
         $Schedule           = $CollectorSet.Schedules.CreateSchedule();
         $Schedule.Days      = 127;
-        $Schedule.StartDate = [DateTime]$(Get-Date -Format "dd MMM yyyy 18:00:00");
-        $Schedule.StartTime = [DateTime]$(Get-Date -Format "dd MMM yyyy 18:00:00");
+        $Schedule.StartDate = [DateTime]$(Get-Date -Format "dd MMM yyyy 16:00:00");
+        $Schedule.StartTime = [DateTime]$(Get-Date -Format "dd MMM yyyy 16:00:00");
 
         Write-Host "Creating the $name Data Collector Set."
         $CollectorSet.DisplayName               = $name;
